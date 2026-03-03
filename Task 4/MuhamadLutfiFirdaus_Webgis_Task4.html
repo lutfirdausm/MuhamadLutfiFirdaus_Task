@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8f3e9e10662e17499c77b86c36295bac {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8f3e9e10662e17499c77b86c36295bac" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8f3e9e10662e17499c77b86c36295bac = L.map(
+                "map_8f3e9e10662e17499c77b86c36295bac",
+                {
+                    center: [7.37524999999999, 3.89969444444444],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_06fbb7375d570519d33884a5e114770d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_06fbb7375d570519d33884a5e114770d.addTo(map_8f3e9e10662e17499c77b86c36295bac);
+        
+    
+        function geo_json_8bd61f008685e5c14bef1bcefb836413_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"Weight": 2, "color": "Black", "fillOpacity": 0.5, "fillcolor": "#3186cc"};
+            }
+        }
+
+        function geo_json_8bd61f008685e5c14bef1bcefb836413_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_8bd61f008685e5c14bef1bcefb836413 = L.geoJson(null, {
+                onEachFeature: geo_json_8bd61f008685e5c14bef1bcefb836413_onEachFeature,
+            
+                style: geo_json_8bd61f008685e5c14bef1bcefb836413_styler,
+            ...{
+}
+        });
+
+        function geo_json_8bd61f008685e5c14bef1bcefb836413_add (data) {
+            geo_json_8bd61f008685e5c14bef1bcefb836413
+                .addData(data);
+        }
+            geo_json_8bd61f008685e5c14bef1bcefb836413_add({"bbox": [3.86055555555555, 7.31277777777777, 3.92083333333333, 7.43222222222221], "features": [{"bbox": [3.91638888888888, 7.43138888888888, 3.91638888888888, 7.43138888888888], "geometry": {"coordinates": [3.91638888888888, 7.43138888888888], "type": "Point"}, "id": "4512", "properties": {"Aspect": 345.963745117187, "Curvature ": 0.0, "Drainage": 218.7961, "FA": 1.0, "Rainfall": 68.14082191780818, "SUSCEP": "Moderate", "Slope": 45.8682518005371, "TWI": -7.52585411071777, "X": 3.91638888888888, "Y": 7.43138888888888}, "type": "Feature"}, {"bbox": [3.91111111111111, 7.39638888888888, 3.91111111111111, 7.39638888888888], "geometry": {"coordinates": [3.91111111111111, 7.39638888888888], "type": "Point"}, "id": "41533", "properties": {"Aspect": 160.201126098632, "Curvature ": 0.0, "Drainage": 209.7827, "FA": 2.0, "Rainfall": 75.31616438356163, "SUSCEP": "No_Flood", "Slope": 73.243797302246, "TWI": -8.29044246673584, "X": 3.91111111111111, "Y": 7.39638888888888}, "type": "Feature"}, {"bbox": [3.90833333333333, 7.34277777777777, 3.90833333333333, 7.34277777777777], "geometry": {"coordinates": [3.90833333333333, 7.34277777777777], "type": "Point"}, "id": "115435", "properties": {"Aspect": 225.0, "Curvature ": 1296000000.0, "Drainage": 214.3956, "FA": 0.0, "Rainfall": 64.79013698630135, "SUSCEP": "Low", "Slope": 57.849021911621, "TWI": -8.65304565429687, "X": 3.90833333333333, "Y": 7.34277777777777}, "type": "Feature"}, {"bbox": [3.91722222222222, 7.35583333333332, 3.91722222222222, 7.35583333333332], "geometry": {"coordinates": [3.91722222222222, 7.35583333333332], "type": "Point"}, "id": "97920", "properties": {"Aspect": 225.0, "Curvature ": 2592000000.0, "Drainage": 230.3318, "FA": 116.0, "Rainfall": 101.51561643835623, "SUSCEP": "Very_High", "Slope": 10.0249881744384, "TWI": -1.69364690780639, "X": 3.91722222222222, "Y": 7.35583333333332}, "type": "Feature"}, {"bbox": [3.895, 7.35222222222221, 3.895, 7.35222222222221], "geometry": {"coordinates": [3.895, 7.35222222222221], "type": "Point"}, "id": "102856", "properties": {"Aspect": 300.963745117187, "Curvature ": 2592000000.0, "Drainage": 231.2898, "FA": 0.0, "Rainfall": 72.02273972602741, "SUSCEP": "Very_High", "Slope": 65.4239807128906, "TWI": -8.97103977203369, "X": 3.895, "Y": 7.35222222222221}, "type": "Feature"}, {"bbox": [3.86444444444444, 7.35222222222221, 3.86444444444444, 7.35222222222221], "geometry": {"coordinates": [3.86444444444444, 7.35222222222221], "type": "Point"}, "id": "102746", "properties": {"Aspect": 120.963752746582, "Curvature ": -1296000000.0, "Drainage": 209.935, "FA": 2.0, "Rainfall": 78.52602739726025, "SUSCEP": "No_Flood", "Slope": 55.5500984191894, "TWI": -7.46696233749389, "X": 3.86444444444444, "Y": 7.35222222222221}, "type": "Feature"}, {"bbox": [3.92083333333333, 7.34972222222221, 3.92083333333333, 7.34972222222221], "geometry": {"coordinates": [3.92083333333333, 7.34972222222221], "type": "Point"}, "id": "106379", "properties": {"Aspect": 157.619857788085, "Curvature ": -5184000000.0, "Drainage": 211.5915, "FA": 4.0, "Rainfall": 89.10630136986298, "SUSCEP": "Low", "Slope": 66.4840850830078, "TWI": -7.41133165359497, "X": 3.92083333333333, "Y": 7.34972222222221}, "type": "Feature"}, {"bbox": [3.89888888888888, 7.42694444444444, 3.89888888888888, 7.42694444444444], "geometry": {"coordinates": [3.89888888888888, 7.42694444444444], "type": "Point"}, "id": "7909", "properties": {"Aspect": 305.537689208984, "Curvature ": -1296000000.0, "Drainage": 223.5614, "FA": 2.0, "Rainfall": 71.06986301369864, "SUSCEP": "High", "Slope": 47.0777549743652, "TWI": -7.16266727447509, "X": 3.89888888888888, "Y": 7.42694444444444}, "type": "Feature"}, {"bbox": [3.86055555555555, 7.31277777777777, 3.86055555555555, 7.31277777777777], "geometry": {"coordinates": [3.86055555555555, 7.31277777777777], "type": "Point"}, "id": "144140", "properties": {"Aspect": 33.6900672912597, "Curvature ": -2592000000.0, "Drainage": 213.6335, "FA": 6.0, "Rainfall": 83.3953424657534, "SUSCEP": "Low", "Slope": 42.0311126708984, "TWI": -6.13895893096923, "X": 3.86055555555555, "Y": 7.31277777777777}, "type": "Feature"}, {"bbox": [3.90416666666666, 7.43222222222221, 3.90416666666666, 7.43222222222221], "geometry": {"coordinates": [3.90416666666666, 7.43222222222221], "type": "Point"}, "id": "3884", "properties": {"Aspect": 95.1944274902343, "Curvature ": 2592000000.0, "Drainage": 218.9402, "FA": 0.0, "Rainfall": 85.86602739726023, "SUSCEP": "Moderate", "Slope": 54.0847129821777, "TWI": -8.51125812530517, "X": 3.90416666666666, "Y": 7.43222222222221}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_8bd61f008685e5c14bef1bcefb836413.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["Slope", "Curvature ", "Aspect", "TWI", "FA", "Rainfall", "Drainage", "SUSCEP"];
+    let aliases = ["Slope:", "Curvature:", "Aspect:", "TWI:", "FA:", "Rainfall:", "Drainage:", "SUSCEPTIBILITY:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_8bd61f008685e5c14bef1bcefb836413.addTo(map_8f3e9e10662e17499c77b86c36295bac);
+        
+    
+            var marker_ec699555c73533f622221fc7cd20c6f0 = L.marker(
+                [7.43222222222221, 3.90416666666666],
+                {
+}
+            ).addTo(map_8f3e9e10662e17499c77b86c36295bac);
+        
+    
+            var icon_495ca19c64db7951403b7da159f504f5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bad974a8f6aa4fae1f574206ca308f7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e743c5563788d0ef965d037ebd41190 = $(`<div id="html_9e743c5563788d0ef965d037ebd41190" style="width: 100.0%; height: 100.0%;">Slope: 54.0847129821777<br>Curvature: 2592000000.0<br>Aspect: 95.1944274902343<br>TWI: -8.51125812530517<br>FA: 0.0<br>Rainfall: 85.86602739726023<br>Drainage: 218.9402<br>SUSCEPTIBILITY: Moderate</div>`)[0];
+                popup_bad974a8f6aa4fae1f574206ca308f7e.setContent(html_9e743c5563788d0ef965d037ebd41190);
+            
+        
+
+        marker_ec699555c73533f622221fc7cd20c6f0.bindPopup(popup_bad974a8f6aa4fae1f574206ca308f7e)
+        ;
+
+        
+    
+    
+                marker_ec699555c73533f622221fc7cd20c6f0.setIcon(icon_495ca19c64db7951403b7da159f504f5);
+            
+</script>
+</html>
